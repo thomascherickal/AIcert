@@ -86,3 +86,11 @@ view：后台与前端的接口，每个python文件为一个蓝图，在flask�
 
 ## 协议
 AIcert基于MulanPSL-2.0协议，关于协议的更多信息，请参看[LICENSE](https://github.com/ZJUICSR/AIcert/blob/main/LICENSE)文件。
+## 致谢
+特别感谢
+- [auto_LiRPA](https://github.com/Verified-Intelligence/auto_LiRPA) 
+- [RiFT](https://github.com/Immortalise/RiFT) 
+- [llm-attacks](https://github.com/llm-attacks/llm-attacks)
+- [auto_LiRPA](https://github.com/Verified-Intelligence/auto_LiRPA)
+为项目提供了重要的功能。
+感谢所有贡献者的帮助，以及所有在这个项目中提出问题和建议的人们。

@@ -127,11 +127,8 @@ from auto_LiRPA_verifiy.language.Transformer.Transformer import get_transformer_
 - Code refers to [auto_LiRPA](https://github.com/Verified-Intelligence/auto_LiRPA).
 
 ## 6 致谢
-
 特别感谢
-------
 - [auto_LiRPA](https://github.com/Verified-Intelligence/auto_LiRPA) 为项目提供了重要的功能。
- 
 感谢所有贡献者的帮助，以及所有在这个项目中提出问题和建议的人们。
 <br><br>
 -- 2023.02.17

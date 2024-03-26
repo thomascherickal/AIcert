@@ -48,9 +48,6 @@ parser.add_argument('--topk', default='[1,3]', type=str)
 parser.add_argument('--suffix', default='test', type=str)
 # parser.add_argument('--suffix', default='trainData_0.1_release_nosub', type=str)
 parser.add_argument('--in_mode', default='[1,1,1]', type=str)
-# parser.add_argument('--sub_sampler',
-#                     default='/home/data/lilongfei/FeatureFactorization/sub_sampler_VOC2012_crop_10par_C.npy',
-#                     type=str)
 parser.add_argument('--logspace', default=2, type=int)
 parser.add_argument('--lr', '--learning-rate', default=0.00001, type=float,
                     metavar='LR', help='initial learning rate')

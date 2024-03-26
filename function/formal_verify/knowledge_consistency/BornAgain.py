@@ -46,7 +46,7 @@ parser = argparse.ArgumentParser(description='Born Again Network')
 #                     help='path to dataset')
 parser.add_argument('--train_path', default='../CUB_200_2011/crop/train', help='../../ILSVRC2012/', type=str)
 parser.add_argument('--val_path', default='../CUB_200_2011/crop/test', type=str, help='../ILSVRC2012_img_val')
-parser.add_argument('--data_path', default='/home/data/lilongfei/VOCdevkit/VOC2012/OurFiles/', type=str)
+parser.add_argument('--data_path', default='dataset/VOCdevkit/VOC2012/OurFiles/', type=str)
 parser.add_argument('--arch', '-a', metavar='ARCH', default='vgg16_bn')
 parser.add_argument('--optim', default='SGD',type=str)
 parser.add_argument('-j', '--workers', default=4, type=int, metavar='N',

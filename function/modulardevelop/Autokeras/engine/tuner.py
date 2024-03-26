@@ -80,7 +80,12 @@ class LossHistory(keras.callbacks.Callback):
 
 def get_gradient(model_path,x_path,y_path,epoch,save_path):
     import subprocess
-    command="/home/Wenjie/anaconda3/envs/autotrain/bin/python ./utils/get_gradient_on_cpu.py -m {} -dx {} -dy {} -ep {} -sp {}" #TODO:need to set your your python interpreter path
+    import sys,os
+ 
+    # 获取conda环境的根目录
+    conda_root = sys.prefix
+    conda_root = os.path.dirname(conda_root)
+    command=conda_root+"/autotrain/bin/python ./utils/get_gradient_on_cpu.py -m {} -dx {} -dy {} -ep {} -sp {}" #TODO:need to set your your python interpreter path
 
     out_path=save_path.split('.')[0]+'_out'
     out_file = open(out_path, 'w')

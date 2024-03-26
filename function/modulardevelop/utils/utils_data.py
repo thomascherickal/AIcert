@@ -117,15 +117,11 @@ if __name__=='__main__':
     import os
     os.environ["CUDA_VISIBLE_DEVICES"] = "3"
 
-    # train = tfds.load('tiny_imagenet_dataset',data_dir='/home/zxy/workspace/DL_work/DL_autokeras/1Autokeras/test_codes/experiment/1_dataset',
-    #             split='train',as_supervised=True)# shuffle_files=True, 
 
-    # print(1)
-    # # optional
     tf.compat.v1.enable_eager_execution()
 
     from tiny_imagenet import TinyImagenetDataset
-    tiny_imagenet_builder = TinyImagenetDataset(data_dir='/home/zxy/workspace/DL_work/DL_autokeras/1Autokeras/test_codes/experiment/1_dataset')
+    tiny_imagenet_builder = TinyImagenetDataset(data_dir='test_codes/experiment/1_dataset')
     tiny_imagenet_builder.download_and_prepare()
 
     train_dataset = tiny_imagenet_builder.as_dataset(split="train")
@@ -143,30 +139,4 @@ if __name__=='__main__':
 
     # print info about the data
     print(tiny_imagenet_builder.info)
-
-    # ds = tfds.builder('food101',data_dir='/home/zxy/workspace/DL_work/DL_autokeras/1Autokeras/test_codes/experiment/1_dataset/')
-    # ds = tfds.builder('cars196',data_dir='/home/zxy/workspace/DL_work/DL_autokeras/1Autokeras/test_codes/experiment/1_dataset/cars196')
-    # ds.download_and_prepare()
     print(1)
-
-    # # Load data from disk as tf.data.Datasets
-    # datasets = mnist.as_dataset()
-    # train_dataset, test_dataset = datasets['train'], datasets['test']
-    # assert isinstance(train_dataset, tf.data.Dataset)
-
-    # # And convert the Dataset to NumPy arrays if you'd like
-    # for example in tfds.as_numpy(train_dataset):
-    #   image, label = example['image'], example['label']
-    #   assert isinstance(image, np.array)
-
-
-    # (training_images, training_labels), (test_images, test_labels) =  \
-    #     tfds.as_numpy(tfds.load('food101',data_dir='/data/zxy/DL_autokeras/1Autokeras/test_codes/experiment/1_dataset',
-    #     split = ['train', 'test'],batch_size=-1, as_supervised=True))
-
-    # ds = tfds.load('food101',data_dir='/data/zxy/DL_autokeras/1Autokeras/test_codes/experiment/1_dataset',
-    #                split='train', shuffle_files=True)#,batch_size=32
-    # train_batches = ds.shuffle(100).batch(32)
-    # for example in tfds.as_numpy(ds):
-    #     image, label = example['image'], example['label']
-    #     assert isinstance(image, np.array)
